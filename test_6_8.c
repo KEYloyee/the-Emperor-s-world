@@ -1,25 +1,21 @@
 //编写一个程序完成1到n的阶乘和
 #include <stdio.h>
-int jiecheng(int n)
-{
-    int i,chengji;
-    chengji=1;
-    for (i=1;i<=n;i++)
-    {
-        chengji*=i;
-    }
-    return chengji;
-}
+#include <stdio.h>
 int main()
 {
-    int i,n;
+    int n;
     printf("请输入一个整数：\n");
     scanf("%d",&n);
-    int sum = 0;
+    int i,sum;
     for (i=1;i<=n;i++)
     {
-        sum += jiecheng(i);
-    }
+        int j,i_;
+        for (j=1;j<=i;j++)
+        {
+            i_ *= j;
+        }
+        sum += i_;
+    } 
     printf("从1到%d的阶乘和是%d",n,sum);
     return 0;
 }
